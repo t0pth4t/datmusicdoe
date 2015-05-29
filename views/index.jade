@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= 'Posts'
+  ul
+    for pos in contentful.post
+      li
+        h4= pos.title
+        != marked(pos.body)
