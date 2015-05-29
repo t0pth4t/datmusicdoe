@@ -1,6 +1,6 @@
-require.config
-  paths:
-    jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min'
+$ = require 'jquery'
+howl = require 'howler'
 
-require ['jquery'], ($) ->
-  console.log 'jquery loaded'
+src = $('#audio-player').attr('src')
+
+new Howl(urls:['http://dl.soundowl.com/7ut7.mp3'])

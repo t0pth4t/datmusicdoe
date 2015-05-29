@@ -2,16 +2,18 @@
   "name": "datmusicdoe",
   "description": "blog",
   "dependencies": {
-    "jade": "1.9.x",
-    "marked": "0.3.x",
-    "stylus": "0.50.x",
-    "coffee-script": "1.9.x",
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
+    "coffee-script": "1.9.x",
+    "howler": "^1.1.26",
+    "jade": "1.9.x",
+    "jquery": "^2.1.4",
     "marked": "0.3.x",
-    "rupture": "0.6.x",
     "roots": "3.0.x",
+    "roots-browserify": "^0.3.2",
     "roots-contentful": "0.0.7",
-    "ship": "0.2.x"
+    "rupture": "0.6.x",
+    "ship": "0.2.x",
+    "stylus": "0.50.x"
   }
 }

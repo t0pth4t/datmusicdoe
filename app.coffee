@@ -4,6 +4,7 @@ autoprefixer = require 'autoprefixer-stylus'
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
+browserify = require 'roots-browserify'
 
 module.exports =
   ignores: [
@@ -17,4 +18,4 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config)]
+  extensions: [contentful(config), browserify(files: "assets/js/main.coffee", out: 'js/build.js', minify: false)]

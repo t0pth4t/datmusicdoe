@@ -3,7 +3,9 @@ extends layout
 block content
   h1= 'Posts'
   ul
-    for pos in contentful.post
+    for post in contentful.posts
       li
-        h4= pos.title
-        != marked(pos.body)
+        h4= post.title
+        != marked(post.body)
+        audio#audio-player(src='http://dl.soundowl.com/7ut7.mp3', type='audio/mp3', preload='none')
+        button#play(type='button') Play
