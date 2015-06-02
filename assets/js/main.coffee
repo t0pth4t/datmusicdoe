@@ -1,6 +1,6 @@
 $ = require 'jquery'
 howl = require 'howler'
 
-src = $('#audio-player').attr('src')
-
-new Howl(urls:['http://dl.soundowl.com/7ut7.mp3'])
+$(".play").on "click", ->
+  $audio = $($(this).siblings()[0])
+  new Howl(urls: [ $audio.attr("src") ])

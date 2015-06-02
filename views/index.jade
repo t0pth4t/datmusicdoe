@@ -1,11 +1,16 @@
 extends layout
 
 block content
-  h1= 'Posts'
-  ul
-    for post in contentful.posts
-      li
-        h4= post.title
-        != marked(post.body)
-        audio#audio-player(src='http://dl.soundowl.com/7ut7.mp3', type='audio/mp3', preload='none')
-        button#play(type='button') Play
+  .container-fluid
+    .row
+      .col-md-6.col-md-offset-3
+        for post in contentful.posts
+          #main.well.post-body
+            h2.post-title= post.title
+            img.post-image(alt='Szokgyh', src=post.image)
+            .post-content
+              if post.body
+                != marked(post.body)
+              audio#audio-player(src='http://dl.soundowl.com/7ut7.mp3', type='audio/mp3', preload='none')
+              button.play.btn.btn-success(type='button') Play
+              iframe(width='100%', height='166', scrolling='no', frameborder='no', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180453299&color=070707&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false')

@@ -7,9 +7,23 @@ html.no-js
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/master.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
   body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(rel='home', href='#', title='Buy Sell Rent Everyting')
+            img(style='max-width:240px; margin-top: -7px;', src='/img/logo-small.png')
+
     block content
 
   script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
   script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
   script(src='/js/build.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
