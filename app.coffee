@@ -5,6 +5,7 @@ contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
 browserify = require 'roots-browserify'
+netlify = require 'roots-netlify'
 
 module.exports =
   ignores: [
@@ -18,4 +19,4 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config), browserify(files: "assets/js/main.coffee", out: 'js/build.js', minify: false)]
+  extensions: [contentful(config), browserify(files: "assets/js/main.coffee", out: 'js/build.js', minify: false), netlify(headers:'/*':'X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block')]

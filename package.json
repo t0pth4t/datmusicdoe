@@ -12,6 +12,7 @@
     "roots": "3.0.x",
     "roots-browserify": "^0.3.2",
     "roots-contentful": "0.0.7",
+    "roots-netlify": "0.0.4",
     "rupture": "0.6.x",
     "ship": "0.2.x",
     "stylus": "0.50.x"
