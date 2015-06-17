@@ -9,7 +9,7 @@ block content
             a(href=post._url)
               h2.post-title= post.title
 
-            img.post-image(alt='Szokgyh', src=post.image)
+            img.post-image(src=post.image)
             .post-content
               if post.body
                 != marked(post.body)

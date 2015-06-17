@@ -19,4 +19,11 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config), browserify(files: "assets/js/main.coffee", out: 'js/build.js', minify: false), netlify(headers:'/*':'X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block')]
+  extensions: [
+    contentful(config),
+    browserify(
+      files: "assets/js/main.coffee",
+      out: 'js/build.js', minify: false),
+    netlify(
+      headers:'/*':'X-Frame-Options': 'DENY','X-XSS-Protection': '1; mode=block')
+  ]
